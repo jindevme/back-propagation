@@ -40,7 +40,7 @@ class NN():
 
     # x, y, o 데이터로 학습
     def train(self, x, y, o=None):
-        if o is None: o = self.forward(x)
+        if o is None: o = self.predict(x)
         self.backward(x, y, o)
 
     # x 데이터로 y 값 예측
