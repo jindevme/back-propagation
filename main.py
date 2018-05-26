@@ -84,7 +84,7 @@ for epoch in range(epochs):
     y_pred = NN.predict(x_train)
     y_pred_bin = binarize(y_pred)
     print("Loss : {:.10f} ({}/{})".format(loss(y_train, y_pred), epoch, epochs))
-    NN.train(x_train, y_train)
+    NN.train(x_train, y_train, y_pred)
 
 # 검증
 y_test_pred = NN.predict(x_test)
